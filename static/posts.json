@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Welcome to our new blog",
+    "date": "2024-04-01",
+    "content": "<p>This is a sample post showing how we will share updates on our journey.</p>"
+  },
+  {
+    "title": "Tech deep dive",
+    "date": "2024-03-15",
+    "content": "<pre><code>console.log('Hello world');</code></pre>"
+  }
+]
