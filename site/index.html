@@ -6,11 +6,13 @@
   <meta name="description" content="TentCity Software - Crafting tiny worlds with big stories">
   <meta property="og:title" content="TentCity Software">
   <meta property="og:description" content="Crafting tiny worlds with big stories">
-  <meta property="og:image" content="https://via.placeholder.com/1200x630.webp?text=TentCity">
+  <meta property="og:image" content="/static/images/TentCityStudio.png">
   <meta name="twitter:card" content="summary_large_image">
   <title>TentCity Software</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -20,33 +22,29 @@
       }
     }
   </script>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body class="min-h-screen flex flex-col">
-<div id="header"></div>
-<header class="relative h-screen">
-  <video class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline poster="https://via.placeholder.com/1280x720.webp?text=City">
-    <source src="https://via.placeholder.com/1280x720.mp4" type="video/mp4">
-  </video>
+<header class="relative h-screen bg-fixed bg-center bg-cover" style="background-image:url('/static/images/TentCityStudio.png')">
   <div class="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-center p-4">
     <h1 class="text-5xl md:text-6xl font-bold text-accent">TentCity Software</h1>
     <p class="mt-4 text-xl md:text-2xl">Crafting tiny worlds with big stories</p>
-    <a href="games.html" class="mt-8 inline-block px-6 py-3 bg-accent text-black rounded-full shadow-md hover:scale-105 transition duration-200 animate-pulse-cta">Explore Our Games</a>
+    <a href="games.html" class="mt-8 inline-block px-6 py-3 bg-accent text-black rounded-full shadow-lg hover:scale-105 transition transform">Explore Our Games</a>
   </div>
 </header>
 <main class="flex-grow">
   <section class="py-16 bg-gray-900" data-reveal>
     <div class="container mx-auto px-4">
       <div class="grid md:grid-cols-3 gap-8 text-center">
-        <div class="p-6 bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-200">
+        <div class="p-6 bg-gray-800 rounded-lg shadow hover:shadow-lg transition">
           <h2 class="text-xl font-semibold text-accent mb-2">Original IPs</h2>
           <p>Fresh ideas crafted in-house.</p>
         </div>
-        <div class="p-6 bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-200">
+        <div class="p-6 bg-gray-800 rounded-lg shadow hover:shadow-lg transition">
           <h2 class="text-xl font-semibold text-accent mb-2">Player-First Design</h2>
           <p>Gameplay that respects your time.</p>
         </div>
-        <div class="p-6 bg-gray-800 rounded-lg shadow hover:shadow-lg transition duration-200">
+        <div class="p-6 bg-gray-800 rounded-lg shadow hover:shadow-lg transition">
           <h2 class="text-xl font-semibold text-accent mb-2">Built in Vancouver</h2>
           <p>Proudly Canadian crafted.</p>
         </div>
@@ -68,6 +66,6 @@
     <p>&copy; 2024 TentCity Software</p>
   </div>
 </footer>
-<script src="js/main.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

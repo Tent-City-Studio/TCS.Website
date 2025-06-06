@@ -6,33 +6,32 @@
   <meta name="description" content="Our games">
   <meta property="og:title" content="TentCity Games">
   <meta property="og:description" content="Check out our current titles">
-  <meta property="og:image" content="https://via.placeholder.com/1200x630.webp?text=TentCity">
+  <meta property="og:image" content="/static/images/TentCityStudio.png">
   <meta name="twitter:card" content="summary_large_image">
   <title>Games - TentCity Software</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = { theme: { extend: { colors: { accent: '#00FFC8' } } } }
   </script>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-gray-900 min-h-screen flex flex-col">
-<div id="header"></div>
 <header class="p-6 text-center">
   <h1 class="text-4xl font-bold text-accent">Our Games</h1>
 </header>
 <main class="flex-grow container mx-auto px-4" data-reveal>
   <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-    <div class="break-inside-avoid bg-gray-800 rounded-lg shadow-md hover:scale-105 hover:ring-2 hover:ring-accent transition duration-200 overflow-hidden">
-      <img src="https://via.placeholder.com/640x360.webp?text=Game+1" alt="DamonsMod" class="w-full" loading="lazy">
+    <div class="break-inside-avoid bg-gray-800 rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+      <img src="/static/images/DamonsMod Logo.png" alt="DamonsMod" class="w-full" loading="lazy">
       <div class="p-4">
         <h2 class="text-accent text-xl mb-2">DamonsMod</h2>
         <p class="text-sm">A mod experience beyond imagination.</p>
         <a href="#" class="text-accent underline">Learn More</a>
       </div>
     </div>
-    <div class="break-inside-avoid bg-gray-800 rounded-lg shadow-md hover:scale-105 hover:ring-2 hover:ring-accent transition duration-200 overflow-hidden">
-      <img src="https://via.placeholder.com/640x360.webp?text=Game+2" alt="Pixel Jimmy" class="w-full" loading="lazy">
+    <div class="break-inside-avoid bg-gray-800 rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+      <img src="/static/images/Pixel_Jimmy.jpg" alt="Pixel Jimmy" class="w-full" loading="lazy">
       <div class="p-4">
         <h2 class="text-accent text-xl mb-2">Pixel Jimmy</h2>
         <p class="text-sm">Retro adventure in a pixel world.</p>
@@ -44,6 +43,6 @@
 <footer class="bg-gray-800 text-gray-300 py-4 text-center" data-reveal>
   <a href="index.html" class="text-accent">Back Home</a>
 </footer>
-<script src="js/main.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

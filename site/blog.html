@@ -6,29 +6,21 @@
   <meta name="description" content="Dev blog and news">
   <meta property="og:title" content="Dev Blog - TentCity">
   <meta property="og:description" content="Latest news from TentCity Software">
-  <meta property="og:image" content="https://via.placeholder.com/1200x630.webp?text=TentCity">
+  <meta property="og:image" content="/static/images/TentCityStudio.png">
   <meta name="twitter:card" content="summary_large_image">
   <title>Dev Blog - TentCity Software</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
     tailwind.config = { theme: { extend: { colors: { accent: '#00FFC8' } } } }
   </script>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-gray-900 min-h-screen flex flex-col">
-<div id="header"></div>
 <header class="p-6 text-center">
   <h1 class="text-4xl font-bold text-accent">Dev Blog / News</h1>
 </header>
-<main class="blog flex-grow container mx-auto px-4 space-y-8 lg:grid lg:grid-cols-2 lg:gap-8" data-reveal>
-  <section class="mb-8 lg:col-span-2">
-    <img src="https://via.placeholder.com/1200x400.webp?text=Featured" alt="Featured" class="rounded-lg shadow-md mb-4 object-cover w-full h-64 lg:h-80">
-    <h2 class="text-2xl text-accent mb-2">Featured Post</h2>
-    <p class="mb-2">Check out our latest development update.</p>
-    <a href="#" class="text-accent underline">Read More</a>
-  </section>
+<main class="flex-grow container mx-auto px-4 space-y-8" data-reveal>
   <article class="bg-gray-800 rounded-lg shadow p-6">
     <h2 class="text-2xl text-accent mb-2">Welcome to our new blog</h2>
     <p class="text-sm text-gray-400">April 1, 2024</p>
@@ -46,11 +38,10 @@ console.log('Hello world');
 &lt;/code&gt;
     </pre>
   </article>
-  <button id="loadMore" class="mx-auto block px-5 py-2 bg-accent text-black rounded-full">Load More Posts</button>
 </main>
 <footer class="bg-gray-800 text-gray-300 py-4 text-center" data-reveal>
   <a href="index.html" class="text-accent">Back Home</a>
 </footer>
-<script src="js/main.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

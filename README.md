@@ -1,52 +1,30 @@
 # TentCity Software Website
 
-This repository contains a static five‑page website for **TentCity Software**, built with semantic HTML5, Tailwind CSS (via CDN) and vanilla JavaScript.
+This repository contains the static website for **TentCity Software**. It is built with semantic HTML5, Tailwind CSS and vanilla JavaScript.
 
 ## Getting Started
 
-1. Clone the repo and optionally run `pnpm install` (only needed for the placeholder test script).
-2. Open `docs/index.html` directly or serve the `docs` folder with any static server:
+1. Clone the repo and run `pnpm install` (optional: only needed if you plan to run the test script).
+2. Open `site/index.html` in your browser or serve the `site` folder with any static server:
    ```bash
-   npx serve docs
+   npx serve site
    ```
 
-No build step is required because Tailwind is loaded from the CDN and all assets are prebuilt.
+No build step is required as Tailwind is loaded via CDN.
 
-## Structure
+## Development
 
-- **docs** – HTML pages, shared header, scripts and styles
-- **docs/assets** – placeholder images used across the demo
-- **docs/css/styles.css** – small custom CSS additions
-- **docs/js/main.js** – handles menu toggle, lightbox, filters and scroll‑reveal
+- All assets live in the `static` folder.
+- Sample images are stored under `static/images`.
+- Pages are located in the `site` directory:
+  - `index.html`
+  - `games.html`
+  - `screenshots.html`
+  - `blog.html`
+  - `contact.html`
+  - `404.html`
+- Custom styles and scripts are in `site/style.css` and `site/script.js`.
 
-## Development Notes
+## Node Scripts
 
-Pages included:
-- `index.html`
-- `games.html`
-- `screenshots.html`
-- `blog.html`
-- `contact.html`
-- `404.html`
-
-To run the placeholder tests simply execute:
-```bash
-pnpm test
-```
-
-## GitHub Pages Deployment
-
-This repository uses the **`docs/` folder on `main`** as the publish root. After
-pushing to GitHub, enable GitHub Pages in the repository settings and choose
-`main` / `docs` as the source. The site will then be available at:
-
-```
-https://<username>.github.io/TCS.Website/
-```
-
-Because all internal references use relative paths (e.g. `./games.html` and
-`./css/styles.css`), the site works both from the repository root and when
-viewed locally.
-
-To bypass Jekyll processing a `.nojekyll` file is included in the `docs` folder.
-Add a `CNAME` file if you wish to configure a custom domain.
+Run `pnpm test` to execute the placeholder test script.
