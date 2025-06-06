@@ -27,28 +27,13 @@
   <a href="screenshots.html" class="mx-2 hover:underline">Screenshots</a>
   <a href="contact.html" class="mx-2 hover:underline">Contact</a>
 </nav>
-<main class="flex-grow container mx-auto px-4 space-y-8" data-reveal>
-  <article class="bg-gray-800 rounded-lg shadow p-6">
-    <h2 class="text-2xl text-accent mb-2">Welcome to our new blog</h2>
-    <p class="text-sm text-gray-400">April 1, 2024</p>
-    <p class="mt-2">This is a sample post showing how we will share updates on our journey.</p>
-    <div class="mt-4 flex gap-2">
-      <button class="px-3 py-1 bg-accent text-black rounded-full">Share</button>
-    </div>
-  </article>
-  <article class="bg-gray-800 rounded-lg shadow p-6">
-    <h2 class="text-2xl text-accent mb-2">Tech deep dive</h2>
-    <p class="text-sm text-gray-400">March 15, 2024</p>
-    <pre class="bg-gray-900 p-4 rounded overflow-x-auto text-sm">
-&lt;code&gt;
-console.log('Hello world');
-&lt;/code&gt;
-    </pre>
-  </article>
-</main>
+  <main id="posts" class="flex-grow container mx-auto px-4 space-y-8" data-reveal>
+    <!-- Posts injected by blog.js -->
+  </main>
 <footer class="bg-gray-800 text-gray-300 py-4 text-center" data-reveal>
   <a href="index.html" class="text-accent">Back Home</a>
 </footer>
-<script src="script.js"></script>
+  <script src="blog.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
