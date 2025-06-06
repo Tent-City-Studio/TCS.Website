@@ -37,7 +37,7 @@ script to populate `process.env` from this file.
 
 ### User Authentication Server
 
-A small Express server (`server.js`) handles account registration and login. It connects to MongoDB using the `MONGODB_URI` environment variable.
+A small Express server (`server.js`) handles account registration and login. It connects to MongoDB using the `MONGODB_URI` environment variable. If no URI is provided, an in-memory MongoDB instance is started automatically for testing.
 
 Run the server with:
 

@@ -1,18 +1,22 @@
 const path = require('path');
 const express = require('express');
 const { MongoClient } = require('mongodb');
+const { MongoMemoryServer } = require('mongodb-memory-server');
 const bcrypt = require('bcryptjs');
 const { loadEnv } = require('./scripts/config');
 
 loadEnv();
 
-const uri = process.env.MONGODB_URI;
-if (!uri) {
-  console.error('MONGODB_URI not set');
-  process.exit(1);
-}
+let uri = process.env.MONGODB_URI;
+let memory;
 
-const client = new MongoClient(uri);
+async function getClient() {
+  if (uri) return new MongoClient(uri);
+  memory = await MongoMemoryServer.create();
+  uri = memory.getUri();
+  console.warn('MONGODB_URI not set, using in-memory MongoDB');
+  return new MongoClient(uri);
+}
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -21,8 +25,10 @@ app.use(express.static(path.join(__dirname, 'site')));
 app.use('/static', express.static(path.join(__dirname, 'static')));
 
 let users;
+let client;
 
 async function start() {
+  client = await getClient();
   await client.connect();
   const db = client.db();
   users = db.collection('users');
@@ -64,4 +70,10 @@ app.post('/api/login', async (req, res) => {
 start().catch(err => {
   console.error(err);
   process.exit(1);
+});
+
+process.on('SIGINT', async () => {
+  if (client) await client.close();
+  if (memory) await memory.stop();
+  process.exit(0);
 });
