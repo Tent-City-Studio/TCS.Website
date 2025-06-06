@@ -15,12 +15,14 @@
     tailwind.config = { theme: { extend: { colors: { accent: '#00FFC8' } } } }
   </script>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
 </head>
 <body class="bg-gray-900 min-h-screen flex flex-col">
 <header class="p-6 text-center">
   <h1 class="text-4xl font-bold text-accent">Dev Blog / News</h1>
 </header>
-<main class="flex-grow container mx-auto px-4 space-y-8" data-reveal>
+<main class="blog flex-grow container mx-auto px-4 space-y-8" data-reveal>
   <article class="bg-gray-800 rounded-lg shadow p-6">
     <h2 class="text-2xl text-accent mb-2">Welcome to our new blog</h2>
     <p class="text-sm text-gray-400">April 1, 2024</p>
@@ -38,6 +40,7 @@ console.log('Hello world');
 &lt;/code&gt;
     </pre>
   </article>
+  <button id="loadMore" class="mx-auto block px-5 py-2 bg-accent text-black rounded-full">Load More Posts</button>
 </main>
 <footer class="bg-gray-800 text-gray-300 py-4 text-center" data-reveal>
   <a href="index.html" class="text-accent">Back Home</a>
