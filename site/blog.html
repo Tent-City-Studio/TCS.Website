@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dev blog and news">
+  <meta property="og:title" content="Dev Blog - TentCity">
+  <meta property="og:description" content="Latest news from TentCity Software">
+  <meta property="og:image" content="/static/images/TentCityStudio.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Dev Blog - TentCity Software</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { accent: '#00FFC8' } } } }
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 min-h-screen flex flex-col">
+<header class="p-6 text-center">
+  <h1 class="text-4xl font-bold text-accent">Dev Blog / News</h1>
+</header>
+<main class="flex-grow container mx-auto px-4 space-y-8" data-reveal>
+  <article class="bg-gray-800 rounded-lg shadow p-6">
+    <h2 class="text-2xl text-accent mb-2">Welcome to our new blog</h2>
+    <p class="text-sm text-gray-400">April 1, 2024</p>
+    <p class="mt-2">This is a sample post showing how we will share updates on our journey.</p>
+    <div class="mt-4 flex gap-2">
+      <button class="px-3 py-1 bg-accent text-black rounded-full">Share</button>
+    </div>
+  </article>
+  <article class="bg-gray-800 rounded-lg shadow p-6">
+    <h2 class="text-2xl text-accent mb-2">Tech deep dive</h2>
+    <p class="text-sm text-gray-400">March 15, 2024</p>
+    <pre class="bg-gray-900 p-4 rounded overflow-x-auto text-sm">
+&lt;code&gt;
+console.log('Hello world');
+&lt;/code&gt;
+    </pre>
+  </article>
+</main>
+<footer class="bg-gray-800 text-gray-300 py-4 text-center" data-reveal>
+  <a href="index.html" class="text-accent">Back Home</a>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
