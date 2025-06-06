@@ -2,8 +2,8 @@
 const SITE_CONFIG = {
   links: {
     twitter: 'https://twitter.com/tentcity',
-    discord: 'https://discord.gg/tentcity',
-    youtube: 'https://youtube.com/tentcity'
+    discord: 'https://discord.gg/knwtcq3N2a',
+    youtube: 'https://www.youtube.com/@damonfedorick'
   }
 };
 
