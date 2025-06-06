@@ -28,3 +28,9 @@ No build step is required as Tailwind is loaded via CDN.
 ## Node Scripts
 
 Run `pnpm test` to execute the placeholder test script.
+
+## Environment Variables
+
+Some scripts may rely on API keys or other secrets. Copy `.env.example` to `.env`
+and fill in your values. Use `require('./scripts/config').loadEnv()` in any Node
+script to populate `process.env` from this file.
