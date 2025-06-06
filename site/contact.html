@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact TentCity Software">
+  <meta property="og:title" content="Contact - TentCity">
+  <meta property="og:description" content="Get in touch with us">
+  <meta property="og:image" content="/static/images/TentCityStudio.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Contact - TentCity Software</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { accent: '#00FFC8' } } } }
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 min-h-screen flex flex-col">
+<header class="p-6 text-center">
+  <h1 class="text-4xl font-bold text-accent">Contact Us</h1>
+</header>
+<main class="flex-grow container mx-auto px-4" data-reveal>
+  <div class="bg-gray-800 rounded-lg p-6 shadow max-w-xl mx-auto">
+    <p class="mb-4">Email us at <a href="mailto:hello@tentcity.dev" class="text-accent">hello@tentcity.dev</a></p>
+    <iframe class="w-full rounded mb-4" height="250" loading="lazy" src="https://maps.google.com/maps?q=Vancouver%20BC&output=embed"></iframe>
+    <form name="contact" method="POST" data-netlify="true" class="space-y-4">
+      <input type="hidden" name="form-name" value="contact">
+      <p class="hidden">
+        <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+      </p>
+      <input type="text" name="name" placeholder="Name" class="w-full px-3 py-2 rounded text-black" required>
+      <input type="email" name="email" placeholder="Email" class="w-full px-3 py-2 rounded text-black" required>
+      <textarea name="message" rows="4" placeholder="Message" class="w-full px-3 py-2 rounded text-black" required></textarea>
+      <button type="submit" class="px-5 py-2 rounded-full bg-accent text-black hover:scale-105 transition">Send</button>
+    </form>
+  </div>
+</main>
+<footer class="bg-gray-800 text-gray-300 py-4 text-center" data-reveal>
+  <a href="index.html" class="text-accent">Back Home</a>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

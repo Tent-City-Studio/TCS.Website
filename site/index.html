@@ -1,34 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TentCity Software - Crafting tiny worlds with big stories">
+  <meta property="og:title" content="TentCity Software">
+  <meta property="og:description" content="Crafting tiny worlds with big stories">
+  <meta property="og:image" content="/static/images/TentCityStudio.png">
+  <meta name="twitter:card" content="summary_large_image">
   <title>TentCity Software</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { accent: '#00FFC8' }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header class="hero">
-    <div class="overlay">
-      <h1>TentCity Software</h1>
-      <p>Indie game development studio</p>
+<body class="min-h-screen flex flex-col">
+<header class="relative h-screen bg-fixed bg-center bg-cover" style="background-image:url('/static/images/TentCityStudio.png')">
+  <div class="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-center p-4">
+    <h1 class="text-5xl md:text-6xl font-bold text-accent">TentCity Software</h1>
+    <p class="mt-4 text-xl md:text-2xl">Crafting tiny worlds with big stories</p>
+    <a href="games.html" class="mt-8 inline-block px-6 py-3 bg-accent text-black rounded-full shadow-lg hover:scale-105 transition transform">Explore Our Games</a>
+  </div>
+</header>
+<main class="flex-grow">
+  <section class="py-16 bg-gray-900" data-reveal>
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-8 text-center">
+        <div class="p-6 bg-gray-800 rounded-lg shadow hover:shadow-lg transition">
+          <h2 class="text-xl font-semibold text-accent mb-2">Original IPs</h2>
+          <p>Fresh ideas crafted in-house.</p>
+        </div>
+        <div class="p-6 bg-gray-800 rounded-lg shadow hover:shadow-lg transition">
+          <h2 class="text-xl font-semibold text-accent mb-2">Player-First Design</h2>
+          <p>Gameplay that respects your time.</p>
+        </div>
+        <div class="p-6 bg-gray-800 rounded-lg shadow hover:shadow-lg transition">
+          <h2 class="text-xl font-semibold text-accent mb-2">Built in Vancouver</h2>
+          <p>Proudly Canadian crafted.</p>
+        </div>
+      </div>
     </div>
-  </header>
-  <main>
-    <section class="intro">
-      <h2>Welcome</h2>
-      <p>We build immersive games that bring people together.</p>
-    </section>
-    <section class="screenshots">
-      <h2>Our Work</h2>
-      <img src="../imgs/TentCityStudio.png" alt="TentCity Studio" />
-      <img src="../imgs/Pixel_Jimmy.jpg" alt="Pixel Jimmy" />
-      <img src="../imgs/DamonsMod%20Logo.png" alt="DamonsMod Logo" />
-      <p><a href="screenshots.html">View all screenshots</a></p>
-    </section>
-  </main>
-  <footer>
+  </section>
+</main>
+<footer class="bg-gray-800 text-gray-300 py-8" data-reveal>
+  <div class="container mx-auto px-4 text-center space-y-4">
+    <div>
+      <a href="#" class="mx-2 text-accent">Twitter</a>
+      <a href="#" class="mx-2 text-accent">Discord</a>
+      <a href="#" class="mx-2 text-accent">YouTube</a>
+    </div>
+    <form class="flex flex-col sm:flex-row justify-center gap-2">
+      <input type="email" placeholder="Join our newsletter" class="px-4 py-2 rounded-full text-black" required>
+      <button class="px-5 py-2 rounded-full bg-accent text-black hover:scale-105 transition" type="submit">Subscribe</button>
+    </form>
     <p>&copy; 2024 TentCity Software</p>
-  </footer>
-  <script src="script.js"></script>
+  </div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
