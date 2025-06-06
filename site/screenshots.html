@@ -6,17 +6,18 @@
   <meta name="description" content="Game screenshots">
   <meta property="og:title" content="Screenshots - TentCity">
   <meta property="og:description" content="Gallery of our games">
-  <meta property="og:image" content="/static/images/TentCityStudio.png">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.webp?text=TentCity">
   <meta name="twitter:card" content="summary_large_image">
   <title>Screenshots - TentCity Software</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
   <script>
     tailwind.config = { theme: { extend: { colors: { accent: '#00FFC8' } } } }
   </script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="bg-gray-900 min-h-screen flex flex-col">
+<div id="header"></div>
 <header class="p-6 text-center">
   <h1 class="text-4xl font-bold text-accent">Screenshots</h1>
 </header>
@@ -28,30 +29,17 @@
     <button class="filter-btn px-3 py-1 rounded-full bg-gray-800" data-filter="ui">In-Game UI</button>
   </div>
   <div class="gallery grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-    <img src="/static/images/Screenshot 2025-01-24 234326.png" alt="Screenshot" class="rounded-lg shadow" loading="lazy" data-type="pixel">
-    <img src="/static/images/Screenshot 2025-01-26 141935.png" alt="Screenshot" class="rounded-lg shadow" loading="lazy" data-type="concept">
-    <img src="/static/images/Screenshot 2025-01-28 101022.png" alt="Screenshot" class="rounded-lg shadow" loading="lazy" data-type="ui">
-    <img src="/static/images/Screenshot 2025-02-02 150239.png" alt="Screenshot" class="rounded-lg shadow" loading="lazy" data-type="pixel">
-    <img src="/static/images/Screenshot 2025-02-04 002826.png" alt="Screenshot" class="rounded-lg shadow" loading="lazy" data-type="concept">
-    <img src="/static/images/Screenshot 2025-02-04 002858.png" alt="Screenshot" class="rounded-lg shadow" loading="lazy" data-type="ui">
+    <img src="https://via.placeholder.com/600x400.webp?text=Shot 2025-01-24 234326.png" alt="Screenshot" class="rounded-lg shadow" loading="lazy" data-type="pixel">
+    <img src="https://via.placeholder.com/600x400.webp?text=Shot 2025-01-26 141935.png" alt="Screenshot" class="rounded-lg shadow" loading="lazy" data-type="concept">
+    <img src="https://via.placeholder.com/600x400.webp?text=Shot 2025-01-28 101022.png" alt="Screenshot" class="rounded-lg shadow" loading="lazy" data-type="ui">
+    <img src="https://via.placeholder.com/600x400.webp?text=Shot 2025-02-02 150239.png" alt="Screenshot" class="rounded-lg shadow" loading="lazy" data-type="pixel">
+    <img src="https://via.placeholder.com/600x400.webp?text=Shot 2025-02-04 002826.png" alt="Screenshot" class="rounded-lg shadow" loading="lazy" data-type="concept">
+    <img src="https://via.placeholder.com/600x400.webp?text=Shot 2025-02-04 002858.png" alt="Screenshot" class="rounded-lg shadow" loading="lazy" data-type="ui">
   </div>
 </main>
 <footer class="bg-gray-800 text-gray-300 py-4 text-center" data-reveal>
   <a href="index.html" class="text-accent">Back Home</a>
 </footer>
-<script src="script.js"></script>
-<script>
-// Filter functionality
-const buttons = document.querySelectorAll('.filter-btn');
-const images = document.querySelectorAll('.gallery img');
-buttons.forEach(btn => btn.addEventListener('click', () => {
-  const type = btn.dataset.filter;
-  buttons.forEach(b => b.classList.remove('bg-accent','text-black'));
-  btn.classList.add('bg-accent','text-black');
-  images.forEach(img => {
-    img.style.display = (type === 'all' || img.dataset.type === type) ? '' : 'none';
-  });
-}));
-</script>
+<script src="js/main.js"></script>
 </body>
 </html>
