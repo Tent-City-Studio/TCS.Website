@@ -1,6 +1,6 @@
 async function loadBlogPosts() {
   try {
-    const res = await fetch('/static/posts.json');
+    const res = await fetch('static/posts.json');
     if (!res.ok) throw new Error('Failed to load posts');
     const posts = await res.json();
     const container = document.getElementById('posts');
