@@ -34,3 +34,16 @@ Run `pnpm test` to execute the placeholder test script.
 Some scripts may rely on API keys or other secrets. Copy `.env.example` to `.env`
 and fill in your values. Use `require('./scripts/config').loadEnv()` in any Node
 script to populate `process.env` from this file.
+
+### User Authentication Server
+
+A small Express server (`server.js`) handles account registration and login. It connects to MongoDB using the `MONGODB_URI` environment variable.
+
+Run the server with:
+
+```bash
+pnpm install
+pnpm start
+```
+
+The static site is served from the root path, so visit `/login.html` or `/signup.html` to test authentication.
