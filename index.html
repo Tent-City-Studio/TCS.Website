@@ -3,78 +3,141 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TentCity Software - Crafting tiny worlds with big stories">
-  <meta property="og:title" content="TentCity Software">
-  <meta property="og:description" content="Crafting tiny worlds with big stories">
-  <meta property="og:image" content="static/images/TentCityStudio.png">
-  <meta name="twitter:card" content="summary_large_image">
   <title>TentCity Software</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Space+Grotesk:wght@600;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          colors: { accent: '#00FFC8' }
+          colors: { jet: '#0d0d0e' }
         }
       }
     }
   </script>
   <link rel="stylesheet" href="site/style.css">
 </head>
-<body class="min-h-screen flex flex-col">
-<header class="relative h-screen bg-fixed bg-center bg-cover" style="background-image:url('static/images/TentCityStudio.png')">
-  <div class="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-center p-4">
-    <h1 class="text-5xl md:text-6xl font-bold text-accent">TentCity Software</h1>
-    <p class="mt-4 text-xl md:text-2xl text-white">Your one-stop shop for gay</p>
-    <a href="site/games.html" class="mt-8 inline-block px-6 py-3 bg-accent text-black rounded-full shadow-lg hover:scale-105 transition transform">Explore Our Games</a>
-  </div>
-</header>
-<nav class="bg-gray-900 text-accent text-center p-4" data-reveal>
-  <a href="index.html" class="mx-2 hover:underline">Home</a>
-  <a href="site/games.html" class="mx-2 hover:underline">Games</a>
-  <a href="site/blog.html" class="mx-2 hover:underline">Blog</a>
-  <a href="site/screenshots.html" class="mx-2 hover:underline">Screenshots</a>
-  <a href="site/contact.html" class="mx-2 hover:underline">Contact</a>
-  <a href="site/forums.html" class="mx-2 hover:underline">Forums</a>
-  <a href="site/login.html" class="mx-2 hover:underline">Login</a>
-</nav>
-<main class="flex-grow">
-  <section class="py-16 bg-gray-900" data-reveal>
-    <div class="container mx-auto px-4">
-      <div class="grid md:grid-cols-3 gap-8 text-center">
-        <div class="p-6 bg-gray-800 rounded-lg shadow hover:shadow-lg transition">
-          <h2 class="text-xl font-semibold text-accent mb-2">Original IPs</h2>
-          <p>Fresh ideas crafted in-house.</p>
+<body class="bg-jet text-white scroll-smooth">
+  <header class="relative overflow-hidden">
+    <nav id="mainNav" class="fixed top-0 left-0 w-full z-20 text-sm tracking-widest uppercase backdrop-blur-md bg-black/40 transition-all">
+      <div class="max-w-6xl mx-auto flex justify-end p-4">
+        <button id="menuBtn" aria-label="Open menu" class="md:hidden">☰</button>
+        <ul id="navLinks" class="hidden md:flex space-x-6">
+          <li><a href="#games">Games</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#careers">Careers</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div id="drawer" class="fixed inset-0 bg-black/80 p-8 flex-col space-y-4 hidden">
+      <button id="closeBtn" aria-label="Close menu" class="self-end text-2xl">✕</button>
+      <a href="#games">Games</a>
+      <a href="#team">Team</a>
+      <a href="#careers">Careers</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <section id="hero" class="h-screen flex items-center justify-center text-center relative">
+      <div class="absolute inset-0 -z-10 overflow-hidden">
+        <div class="blob bg-gradient-to-r from-fuchsia-500 via-amber-400 to-cyan-400 w-[40rem] h-[40rem] left-[-10%] top-[10%]"></div>
+        <div class="blob bg-gradient-to-r from-cyan-400 via-fuchsia-500 to-amber-400 w-[30rem] h-[30rem] right-[-10%] top-[30%]"></div>
+      </div>
+      <div>
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-6" data-reveal>We’re an independent game development studio.</h1>
+        <p class="text-xl md:text-2xl max-w-2xl mx-auto" data-reveal>Crafting tiny worlds with big stories.</p>
+      </div>
+    </section>
+  </header>
+  <main>
+    <section id="games" class="py-20 space-y-16 max-w-6xl mx-auto px-4">
+      <article class="grid md:grid-cols-12 gap-8 items-center" data-reveal>
+        <img src="https://via.placeholder.com/800x450?text=Rust" alt="Rust screenshot" class="md:col-span-6 rounded-lg hover-lift card-img" loading="lazy">
+        <div class="md:col-span-6">
+          <h3 class="text-3xl font-extrabold mb-2">Rust</h3>
+          <p class="mb-4">First paragraph about Rust. Lorem ipsum dolor sit amet.</p>
+          <p>Second paragraph elaborating the key points of the game.</p>
         </div>
-        <div class="p-6 bg-gray-800 rounded-lg shadow hover:shadow-lg transition">
-          <h2 class="text-xl font-semibold text-accent mb-2">Player-First Design</h2>
-          <p>Gameplay that respects your time.</p>
+      </article>
+      <article class="grid md:grid-cols-12 gap-8 items-center" data-reveal>
+        <div class="md:col-span-6 order-2 md:order-1">
+          <h3 class="text-3xl font-extrabold mb-2">Garry’s Mod</h3>
+          <p class="mb-4">First paragraph about Garry’s Mod. Lorem ipsum dolor sit amet.</p>
+          <p>Second paragraph elaborating the key points of the game.</p>
         </div>
-        <div class="p-6 bg-gray-800 rounded-lg shadow hover:shadow-lg transition">
-          <h2 class="text-xl font-semibold text-accent mb-2">Built in Canada</h2>
-          <p>Proudly Canadian crafted.</p>
+        <img src="https://via.placeholder.com/800x450?text=Garrys+Mod" alt="Garry's Mod screenshot" class="md:col-span-6 order-1 md:order-2 rounded-lg hover-lift card-img" loading="lazy">
+      </article>
+      <article class="grid md:grid-cols-12 gap-8 items-center" data-reveal>
+        <img src="https://via.placeholder.com/800x450?text=Chippy" alt="Chippy screenshot" class="md:col-span-6 rounded-lg hover-lift card-img" loading="lazy">
+        <div class="md:col-span-6">
+          <h3 class="text-3xl font-extrabold mb-2">Chippy</h3>
+          <p class="mb-4">First paragraph about Chippy. Lorem ipsum dolor sit amet.</p>
+          <p>Second paragraph elaborating the key points of the game.</p>
+        </div>
+      </article>
+      <article class="grid md:grid-cols-12 gap-8 items-center" data-reveal>
+        <div class="md:col-span-6 order-2 md:order-1">
+          <h3 class="text-3xl font-extrabold mb-2">s&amp;box</h3>
+          <p class="mb-4">First paragraph about s&amp;box. Lorem ipsum dolor sit amet.</p>
+          <p>Second paragraph elaborating the key points of the game.</p>
+        </div>
+        <img src="https://via.placeholder.com/800x450?text=s%26box" alt="s&box screenshot" class="md:col-span-6 order-1 md:order-2 rounded-lg hover-lift card-img" loading="lazy">
+      </article>
+    </section>
+    <section id="stats" class="py-16 bg-gray-900" data-reveal>
+      <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center">
+        <div class="p-6 border border-white/20 rounded-lg">
+          <span class="number" data-counter="21" aria-label="ALIVE FOR YEARS">0</span>
+          <p class="mt-2 text-sm">ALIVE FOR YEARS</p>
+        </div>
+        <div class="p-6 border border-white/20 rounded-lg">
+          <span class="number" data-counter="43.5" aria-label="GAMES SOLD">0</span>
+          <p class="mt-2 text-sm">GAMES SOLD</p>
+        </div>
+        <div class="p-6 border border-white/20 rounded-lg">
+          <span class="number" data-counter="60.6" aria-label="SKINS AND ITEMS SOLD">0</span>
+          <p class="mt-2 text-sm">SKINS &amp; ITEMS SOLD</p>
         </div>
       </div>
+    </section>
+    <section id="about" class="py-20 text-black bg-gradient-to-r from-[#871aff] to-[#00e0ff]">
+      <div class="max-w-prose mx-auto px-4 space-y-4" data-reveal>
+        <p>Facepunch-style about text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel urna et mauris tristique tristique.</p>
+        <p>Additional paragraphs describing the studio, its history, and values.</p>
+        <p>More details about the team and mission statement to round out the story.</p>
+      </div>
+    </section>
+  </main>
+  <footer id="contact" class="bg-jet py-12 text-gray-400" data-reveal>
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 px-4">
+      <div>
+        <h4 class="uppercase tracking-widest mb-4">Studio</h4>
+        <ul class="space-y-1">
+          <li><a href="#games" class="hover:text-white">Games</a></li>
+          <li><a href="#team" class="hover:text-white">Team</a></li>
+          <li><a href="#careers" class="hover:text-white">Careers</a></li>
+          <li><a href="#legal" class="hover:text-white">Legal</a></li>
+          <li><a href="#merch" class="hover:text-white">Merch</a></li>
+          <li><a href="#contact" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="uppercase tracking-widest mb-4">Games</h4>
+        <ul class="space-y-1">
+          <li><a href="#">Rust</a></li>
+          <li><a href="#">Garry’s Mod</a></li>
+          <li><a href="#">Chippy</a></li>
+          <li><a href="#">s&amp;box</a></li>
+        </ul>
+      </div>
     </div>
-  </section>
-</main>
-<footer class="bg-gray-800 text-gray-300 py-8" data-reveal>
-  <div class="container mx-auto px-4 text-center space-y-4">
-    <div>
-      <a href="#" class="mx-2 text-accent" data-link="twitter">Twitter</a>
-      <a href="#" class="mx-2 text-accent" data-link="discord">Discord</a>
-      <a href="#" class="mx-2 text-accent" data-link="youtube">YouTube</a>
+    <div class="mt-8 flex justify-center space-x-4">
+      <a href="#" aria-label="Twitter" class="hover:text-white">T</a>
+      <a href="#" aria-label="Discord" class="hover:text-white">D</a>
+      <a href="#" aria-label="YouTube" class="hover:text-white">Y</a>
     </div>
-    <form class="flex flex-col sm:flex-row justify-center gap-2">
-      <input type="email" placeholder="Join our newsletter" class="px-4 py-2 rounded-full text-black" required>
-      <button class="px-5 py-2 rounded-full bg-accent text-black hover:scale-105 transition" type="submit">Subscribe</button>
-    </form>
-    <p>&copy; 2024 TentCity Software</p>
-  </div>
-</footer>
-<script src="site/script.js"></script>
+  </footer>
+  <script src="site/script.js"></script>
 </body>
 </html>
